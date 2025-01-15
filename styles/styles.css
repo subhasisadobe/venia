@@ -75,7 +75,7 @@ body {
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: var(--body-font-family);
+  /* font-family: var(--body-font-family); */
   font-size: var(--body-font-size-m);
   line-height: 1.6;
 }
@@ -106,8 +106,8 @@ h5,
 h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
-  font-weight: 600;
+  /* font-family: var(--heading-font-family); */
+  font-weight: 300;
   line-height: 1.25;
   scroll-margin: 40px;
 }
@@ -155,9 +155,11 @@ button {
 
 /* links */
 a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
+  /* color: var(--link-color); */
+  color: rgb(17, 24, 39);
+  text-decoration: underline;
   word-break: break-word;
+  font-size: 22px;
 }
 
 a:hover {
