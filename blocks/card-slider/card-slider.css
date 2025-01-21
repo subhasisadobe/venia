@@ -1,0 +1,70 @@
+.card-slider {
+    overflow: hidden;
+}
+.card-slider>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease;
+    /* gap: 1%; */
+}
+
+.card-slider>ul>li {
+    min-width: calc(100% / 5);
+}
+
+.card-slider .card-slider-card-image {
+    line-height: 0;
+}
+
+.card-slider>ul>li img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.button-container .button {
+    width: 65%;
+    font-size: 16px;
+    padding: .25em 1.2em !important;
+}
+
+.dots {
+    text-align: center;
+}
+
+.dots label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Hover effect on the dots */
+.dots label:hover {
+    background: #bbb;
+}
+
+#slide1:checked~.card-slider>ul {
+    transform: translateX(0%);
+}
+
+#slide2:checked~.card-slider>ul {
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.card-slider>ul {
+    transform: translateX(-200%);
+}
+
+#slide1:checked~.dots label[for="slide1"],
+#slide2:checked~.dots label[for="slide2"],
+#slide3:checked~.dots label[for="slide3"] {
+    background: #333;
+    /* or any preferred “active” color */
+}
