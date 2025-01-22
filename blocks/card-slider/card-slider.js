@@ -1,7 +1,7 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
-  const response = await fetch("http://localhost:3000/query-index.json");
+  const response = await fetch("/query-index.json");
   const json = await response.json();
   const carouselData = json.data.filter(item => item.path.includes("/card-carousel"));
   console.log(block);
